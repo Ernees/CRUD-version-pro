@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\2doParcialcopia menustru\\Test\\Test.csproj": {}
+    "C:\\Users\\User\\Documents\\Mis Repositorios\\CRUD-version-pro\\2doParcialcopia menustru - copia\\Test\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\2doParcialcopia menustru\\Clases_2doParcial\\Clases_2doParcial.csproj": {
+    "C:\\Users\\User\\Documents\\Mis Repositorios\\CRUD-version-pro\\2doParcialcopia menustru - copia\\Clases_2doParcial\\Clases_2doParcial.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\2doParcialcopia menustru\\Clases_2doParcial\\Clases_2doParcial.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Mis Repositorios\\CRUD-version-pro\\2doParcialcopia menustru - copia\\Clases_2doParcial\\Clases_2doParcial.csproj",
         "projectName": "Clases_2doParcial",
-        "projectPath": "C:\\Users\\User\\Desktop\\2doParcialcopia menustru\\Clases_2doParcial\\Clases_2doParcial.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Mis Repositorios\\CRUD-version-pro\\2doParcialcopia menustru - copia\\Clases_2doParcial\\Clases_2doParcial.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\2doParcialcopia menustru\\Clases_2doParcial\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Mis Repositorios\\CRUD-version-pro\\2doParcialcopia menustru - copia\\Clases_2doParcial\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\User\\Desktop\\2doParcialcopia menustru\\Test\\Test.csproj": {
+    "C:\\Users\\User\\Documents\\Mis Repositorios\\CRUD-version-pro\\2doParcialcopia menustru - copia\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\2doParcialcopia menustru\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\Mis Repositorios\\CRUD-version-pro\\2doParcialcopia menustru - copia\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\Users\\User\\Desktop\\2doParcialcopia menustru\\Test\\Test.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\Mis Repositorios\\CRUD-version-pro\\2doParcialcopia menustru - copia\\Test\\Test.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\2doParcialcopia menustru\\Test\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\Mis Repositorios\\CRUD-version-pro\\2doParcialcopia menustru - copia\\Test\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,8 +89,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\User\\Desktop\\2doParcialcopia menustru\\Clases_2doParcial\\Clases_2doParcial.csproj": {
-                "projectPath": "C:\\Users\\User\\Desktop\\2doParcialcopia menustru\\Clases_2doParcial\\Clases_2doParcial.csproj"
+              "C:\\Users\\User\\Documents\\Mis Repositorios\\CRUD-version-pro\\2doParcialcopia menustru - copia\\Clases_2doParcial\\Clases_2doParcial.csproj": {
+                "projectPath": "C:\\Users\\User\\Documents\\Mis Repositorios\\CRUD-version-pro\\2doParcialcopia menustru - copia\\Clases_2doParcial\\Clases_2doParcial.csproj"
               }
             }
           }

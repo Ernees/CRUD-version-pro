@@ -1556,11 +1556,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\2doParcialcopia menustru\\Clases_2doParcial\\Clases_2doParcial.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\Mis Repositorios\\CRUD-version-pro\\2doParcialcopia menustru - copia\\Clases_2doParcial\\Clases_2doParcial.csproj",
       "projectName": "Clases_2doParcial",
-      "projectPath": "C:\\Users\\User\\Desktop\\2doParcialcopia menustru\\Clases_2doParcial\\Clases_2doParcial.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\Mis Repositorios\\CRUD-version-pro\\2doParcialcopia menustru - copia\\Clases_2doParcial\\Clases_2doParcial.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\2doParcialcopia menustru\\Clases_2doParcial\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\Mis Repositorios\\CRUD-version-pro\\2doParcialcopia menustru - copia\\Clases_2doParcial\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

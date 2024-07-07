@@ -47,9 +47,9 @@ namespace Clases_2doParcial
         {
             bool existe;
             existe = false;
-            foreach (Barco empleado in this.Barcos)
+            foreach (Barco bar in this.Barcos)
             {
-                if (empleado == barco)
+                if (bar == barco)
                 {
                     existe = true;
                     break;
@@ -59,14 +59,40 @@ namespace Clases_2doParcial
         }
 
         //  HACER METODO REPARAR
-        //public string MostrarEmpleados()
-        //{
-        //    StringBuilder sb = new StringBuilder();
-        //    foreach (var empleado in empleados)
-        //    {
-        //        sb.Append(empleado.MostrarInformacion());
-        //    }
-        //    return sb.ToString();
-        //}
+
+
+        public bool Reparar(Taller taller, Barco barcoForm)
+        {
+            bool retorno;
+            retorno = false;
+            // Validar que el objeto recibido sea de tipo Taller
+            if (taller != null || (taller is Taller))
+            {
+
+
+                for (int i = 0; i < Barcos.Count(); i++)
+                {
+                    if (barcoForm is Pirata)
+                    {
+                        barcoForm.CalcularCosto();
+                        barcoForm.Estado = "Reparado";
+                        retorno = true;
+                    }
+                    else if (barcoForm is Marina)
+                    {
+                        barcoForm.CalcularCosto();
+                        barcoForm.Estado = "Reparado";
+                        retorno = true;
+                    }
+                    
+                }
+            }
+            return retorno;
+        }
+
+
+
+
+
     }
 }

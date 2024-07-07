@@ -18,12 +18,12 @@ namespace Formularios
         Taller miTaller;
         DatoEmpleado data;
 
-        public FrmMostrar(Taller empresa)
+        public FrmMostrar(Taller taller)
         {
             InitializeComponent();
-            this.miTaller = empresa;
+            this.miTaller = taller;
             data = new DatoEmpleado("localhost", "barcos");
-            this.miTaller.Barcos = data.SeleccionarEmpleados();
+            miTaller.Barcos = data.SeleccionarEmpleados();
             dataGridEmpleados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridEmpleados.DataSource = this.miTaller.Barcos;
         }
@@ -41,8 +41,8 @@ namespace Formularios
                 if (formModificar.ShowDialog() == DialogResult.OK)
                 {
                     data.ModificarEmpleado(formModificar.BarcoFormulario);
-                    MessageBox.Show("(...) Modificado con exito!");
                     refrescarDataGrid(formModificar.BarcoFormulario, row);
+                    MessageBox.Show("(...) Modificado con exito!");
                     dataGridEmpleados.DataSource = this.miTaller.Barcos;
                 }
             }
@@ -70,7 +70,7 @@ namespace Formularios
             frmDel.Text = "Eliminar";
 
             if (frmDel.ShowDialog() == DialogResult.OK)
-            { 
+            {
                 this.miTaller.Barcos.RemoveAt(indice);
                 data.EliminarEmpleado(frmDel.BarcoFormulario.Id);
                 MessageBox.Show("(..) Eliminado con exito");
@@ -83,7 +83,7 @@ namespace Formularios
             fila.Cells["Id"].Value = barco.Id;
             fila.Cells["Nombre"].Value = barco.Nombre;
             fila.Cells["Estado"].Value = barco.Estado;
-            fila.Cells["operacion"].Value = barco.Operacion;
+            fila.Cells["Operacion"].Value = barco.Operacion;
             fila.Cells["Tripulacion"].Value = barco.Tripulacion;
             fila.Cells["Costo"].Value = barco.Costo;
             fila.Cells["Tipo"].Value = barco.Tipo;
@@ -102,14 +102,47 @@ namespace Formularios
             if (tipoString == "Pirata")
             {
                 barco = new Pirata(nombre, estado, operacion, int.Parse(tripulacion), tipo);
+                barco.Costo = double.Parse(costo);
             }
             else if (tipoString == "Marina")
             {
                 barco = new Marina(nombre, estado, operacion, int.Parse(tripulacion), tipo);
+                barco.Costo = double.Parse(costo);
             }
             barco.Id = int.Parse(id);
 
             return barco;
+        }
+
+        private void btnReparar_Click(object sender, EventArgs e)
+        {
+            Barco barco;
+            bool seReparo;
+            DataGridViewRow row = dataGridEmpleados.SelectedRows[0];
+            barco = CrearEmpleadoConDatos(row);
+
+            for (int i =0; i< miTaller.Barcos.Count(); i++)
+            {
+                if (barco.Estado == "No Reparado")
+                {
+                    seReparo = this.miTaller.Reparar(miTaller, barco);
+                    if (seReparo) 
+                    { 
+                        barco.Operacion = EOperacion.Sin_Operacion_Pendiente;
+                        data.ModificarEmpleado(barco);
+                        refrescarDataGrid(barco, row);
+                        row.Cells["Operacion"].Value = EOperacion.Sin_Operacion_Pendiente.ToString();
+                        MessageBox.Show("Barco Reparado Con Exito!");
+                        break;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se puede eparar un Barco ya eparado!");
+                    break;
+                }
+            }
+
         }
     }
 }

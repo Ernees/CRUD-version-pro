@@ -15,13 +15,13 @@ namespace Formularios
     public partial class FrmPrincipal : Form
     {
         DatoEmpleado data;
-        Taller miEmpresa;
+        Taller miTaller;
         public FrmPrincipal()
         {
             InitializeComponent();
-            miEmpresa = new Taller("UTN221");
+            miTaller = new Taller("UTN221");
             data = new DatoEmpleado("localhost", "barcos");
-            miEmpresa.Barcos = data.SeleccionarEmpleados();
+            miTaller.Barcos = data.SeleccionarEmpleados();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -32,8 +32,7 @@ namespace Formularios
                 if (frmAgregar.ShowDialog() == DialogResult.OK)
                 {
                     data.InsertarEmpleado(frmAgregar.BarcoFormulario);
-                    this.miEmpresa.IngresarBarco(frmAgregar.BarcoFormulario);
-                    //limpiarTextBoxes();
+                    this.miTaller.IngresarBarco(frmAgregar.BarcoFormulario);
                     MessageBox.Show("Empleado cargado exitosamente");
                 }
                 else
@@ -46,21 +45,9 @@ namespace Formularios
                 MessageBox.Show(ex.ToString());
             }
         }
-        //private void limpiarTextBoxes()
-        //{
-        //    foreach (Control c in this.Controls)
-        //    {
-        //        if (c is TextBox)
-        //        {
-        //            TextBox txtBox = (TextBox)c;
-        //            txtBox.Clear();
-        //        }
-        //    }
-        //}
-
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            FrmMostrar frmMostrar = new FrmMostrar(this.miEmpresa);
+            FrmMostrar frmMostrar = new FrmMostrar(this.miTaller);
             frmMostrar.Show();
         }
     }

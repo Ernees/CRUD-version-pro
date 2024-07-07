@@ -39,17 +39,21 @@ namespace Clases
                     ETipo tipo;
                     string tipoString = reader.GetString("Tipo");
                     string operacionString = reader.GetString("Operacion");
+                    double costo = reader.GetDouble("Costo");
+
                     Enum.TryParse<EOperacion>(operacionString, out operacionEnum);
                     Enum.TryParse<ETipo>(tipoString, out tipo);
                     Barco barco = null;
                     if (tipo == ETipo.Pirata)
                     {
                         barco = new Pirata(reader.GetString("Nombre"), reader.GetString("Estado Reparado"), operacionEnum, reader.GetInt32("Tripulacion"), tipo);
+                        
                     }
                     else if (tipo == ETipo.Marina)
                     {
                         barco = new Marina(reader.GetString("Nombre"), reader.GetString("Estado Reparado"), operacionEnum, reader.GetInt32("Tripulacion"), tipo);
                     }
+                    barco.Costo = costo;
                     barco.Id = reader.GetInt32("Id");
                     listaEmpleados.Add(barco);
                 }
@@ -75,7 +79,6 @@ namespace Clases
                 comando.ExecuteNonQuery();
             }
         }
-
 
         public void ModificarEmpleado(Barco barco)
         {

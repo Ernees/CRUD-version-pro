@@ -40,7 +40,7 @@ namespace Formularios
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(137, 384);
+            btnModificar.Location = new Point(115, 372);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(109, 45);
             btnModificar.TabIndex = 1;
@@ -50,7 +50,7 @@ namespace Formularios
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(366, 384);
+            btnEliminar.Location = new Point(344, 372);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(114, 45);
             btnEliminar.TabIndex = 2;
@@ -69,12 +69,13 @@ namespace Formularios
             // 
             // btnReparar
             // 
-            btnReparar.Location = new Point(598, 384);
+            btnReparar.Location = new Point(576, 372);
             btnReparar.Name = "btnReparar";
             btnReparar.Size = new Size(114, 45);
             btnReparar.TabIndex = 4;
             btnReparar.Text = "Reparar";
             btnReparar.UseVisualStyleBackColor = true;
+            btnReparar.Click += btnReparar_Click;
             // 
             // FrmMostrar
             // 

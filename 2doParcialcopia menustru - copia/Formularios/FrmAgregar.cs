@@ -16,6 +16,7 @@ namespace Formularios
         Barco barcoFormulario;
         int flag;
         int flagReparado = 0;
+        double costo;
         public Barco BarcoFormulario { get => barcoFormulario; }
 
         public FrmAgregar()
@@ -28,33 +29,26 @@ namespace Formularios
             txtId.Enabled = false;
             this.flag = 0;
         }
-        public FrmAgregar(Barco emp) : this()
+        public FrmAgregar(Barco bar) : this()
         {
-            txtNombre.Text = emp.Nombre;
-            cmbOperacion.Text = emp.Operacion.ToString();
-            cmbTipo.Text = emp.Tipo.ToString();
-            txtTripulacion.Text = emp.Tripulacion.ToString();
-            txtId.Text = emp.Id.ToString();
-            cmbEstado.Text = emp.Estado;
+            txtNombre.Text = bar.Nombre;
+            cmbOperacion.Text = bar.Operacion.ToString();
+            cmbTipo.Text = bar.Tipo.ToString();
+            txtTripulacion.Text = bar.Tripulacion.ToString();
+            txtId.Text = bar.Id.ToString();
+            cmbEstado.Text = bar.Estado;
+            costo = bar.Costo;
             if (cmbEstado.Text == "Reparado")
             {
                 this.flagReparado = 1;
             }
             if (this.flagReparado == 1)
             {
+                cmbOperacion.Text = EOperacion.Sin_Operacion_Pendiente.ToString();
                 cmbOperacion.Enabled = false;
             }
             this.flag = 1;
         }
-        //public FrmAgregar(Empleado emp, string elim) : this(emp)
-        //{
-        //    txtNombre.Enabled = false;
-        //    txtApellido.Enabled = false;
-        //    txtEdad.Enabled = false;
-        //    cbDepartamento.Enabled = false;
-        //    this.flag = 1;
-        //}
-
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             try
@@ -77,19 +71,26 @@ namespace Formularios
                 if (tipoString.Equals("Pirata", StringComparison.OrdinalIgnoreCase))
                 {
                     barcoFormulario = new Pirata(nombre, estado, operacion, tripulacion, tipo);
+
                 }
                 else if (tipoString.Equals("Marina", StringComparison.OrdinalIgnoreCase))
                 {
                     barcoFormulario = new Marina(nombre, estado, operacion, tripulacion, tipo);
+                    
                 }
                 if (this.flag == 1)
                 {
                     id = int.Parse(txtId.Text);
                     barcoFormulario.Id = id;
+                    barcoFormulario.Costo = this.costo;
+                }
+                else
+                {
+                    barcoFormulario.CalcularCosto();
                 }
                 this.DialogResult = DialogResult.OK;
             }
-            catch(FormatException ex)
+            catch (FormatException ex)
             {
                 Console.WriteLine("Se intento agregar un valor incorrecto");
             }
@@ -127,5 +128,16 @@ namespace Formularios
             }
         }
 
+        private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbEstado.Text == "Reparado")
+            {
+                cmbOperacion.Enabled = false;
+            }
+            else
+            {
+                cmbOperacion.Enabled = true;
+            }
+        }
     }
 }

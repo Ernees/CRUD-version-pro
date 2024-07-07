@@ -34,7 +34,7 @@ namespace Clases_2doParcial
         public Marina(string nombre, string estado, EOperacion operacion, int tripulacion, ETipo tipo)
             : base(nombre, estado, operacion, tripulacion, tipo)
         {
-            this.CalcularCosto();
+            //this.CalcularCosto();
         }
         public override string ToString()
         {
