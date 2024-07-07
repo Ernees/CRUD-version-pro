@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfBarco xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Barco xsi:type="Pirata">
+    <Id>1</Id>
+    <Tripulacion>4</Tripulacion>
+    <Nombre>TITANIC</Nombre>
+    <Estado>Reparado</Estado>
+    <Operacion>Sin_Operacion_Pendiente</Operacion>
+    <Tipo>Pirata</Tipo>
+    <Costo>8374</Costo>
+  </Barco>
+  <Barco xsi:type="Pirata">
+    <Id>2</Id>
+    <Tripulacion>22</Tripulacion>
+    <Nombre>SANTA MARIA</Nombre>
+    <Estado>Reparado</Estado>
+    <Operacion>Sin_Operacion_Pendiente</Operacion>
+    <Tipo>Pirata</Tipo>
+    <Costo>5583.85009765625</Costo>
+  </Barco>
+  <Barco xsi:type="Marina">
+    <Id>4</Id>
+    <Tripulacion>49</Tripulacion>
+    <Nombre>QUEEN MARY</Nombre>
+    <Estado>Reparado</Estado>
+    <Operacion>Sin_Operacion_Pendiente</Operacion>
+    <Tipo>Marina</Tipo>
+    <Costo>24099.80078125</Costo>
+  </Barco>
+  <Barco xsi:type="Marina">
+    <Id>5</Id>
+    <Tripulacion>34</Tripulacion>
+    <Nombre>GLEENWORD</Nombre>
+    <Estado>No Reparado</Estado>
+    <Operacion>Sin_Operacion_Pendiente</Operacion>
+    <Tipo>Marina</Tipo>
+    <Costo>9925.990234375</Costo>
+  </Barco>
+  <Barco xsi:type="Pirata">
+    <Id>6</Id>
+    <Tripulacion>16</Tripulacion>
+    <Nombre>CUTTY SARK</Nombre>
+    <Estado>No Reparado</Estado>
+    <Operacion>Sin_Operacion_Pendiente</Operacion>
+    <Tipo>Pirata</Tipo>
+    <Costo>2355.43994140625</Costo>
+  </Barco>
+  <Barco xsi:type="Pirata">
+    <Id>13</Id>
+    <Tripulacion>34</Tripulacion>
+    <Nombre>ERERERERE</Nombre>
+    <Estado>Reparado</Estado>
+    <Operacion>Sin_Operacion_Pendiente</Operacion>
+    <Tipo>Pirata</Tipo>
+    <Costo>2355.35009765625</Costo>
+  </Barco>
+  <Barco xsi:type="Pirata">
+    <Id>14</Id>
+    <Tripulacion>16</Tripulacion>
+    <Nombre>ESPAÑA</Nombre>
+    <Estado>Reparado</Estado>
+    <Operacion>Sin_Operacion_Pendiente</Operacion>
+    <Tipo>Pirata</Tipo>
+    <Costo>3380.622051404638</Costo>
+  </Barco>
+  <Barco xsi:type="Marina">
+    <Id>15</Id>
+    <Tripulacion>33</Tripulacion>
+    <Nombre>Titanic2</Nombre>
+    <Estado>Reparado</Estado>
+    <Operacion>Cambiar_Velas</Operacion>
+    <Tipo>Marina</Tipo>
+    <Costo>10741.2001953125</Costo>
+  </Barco>
+  <Barco xsi:type="Pirata">
+    <Id>17</Id>
+    <Tripulacion>5</Tripulacion>
+    <Nombre>f</Nombre>
+    <Estado>Reparado</Estado>
+    <Operacion>Reparar_Mastil</Operacion>
+    <Tipo>Pirata</Tipo>
+    <Costo>11315.7001953125</Costo>
+  </Barco>
+  <Barco xsi:type="Marina">
+    <Id>19</Id>
+    <Tripulacion>57</Tripulacion>
+    <Nombre>JOURTIC</Nombre>
+    <Estado>Reparado</Estado>
+    <Operacion>Sin_Operacion_Pendiente</Operacion>
+    <Tipo>Marina</Tipo>
+    <Costo>23404.69921875</Costo>
+  </Barco>
+</ArrayOfBarco>
